@@ -1,4 +1,35 @@
 <?php
+
+function __autoload($className){
+	$frameworkFileName = FRAMEWORK_PATH.$className.'.php';
+	if(is_file($frameworkFileName))
+		include_once $frameworkFileName && exit();
+
+	
+	$configFileName = USERAPP_PATH.'Configs/'.$className.'.php';
+	if(is_file($configFileName))
+		include_once $configFileName && exit();
+	
+	$ControllersFileName = USERAPP_PATH.'Modules/Controllers/'.$className.'.php';
+	if(is_file($ControllersFileName))
+		include_once $ControllersFileName && exit();
+
+	
+	$ModelsFileName = USERAPP_PATH.'Modules/Models/'.$className.'.php';
+	if(is_file($ModelsFileName))
+		include_once $ModelsFileName && exit();
+		
+	$ViewsFileName = USERAPP_PATH.'Modules/Views/'.$className.'.php';
+	if(is_file($ViewFileNames))
+		include_once $ViewFileNames && exit();
+	
+	$PluginsFileName = USERAPP_PATH.'Plugins/'.$className.'.php';
+		include_once $PluginsFilename && exit();
+	
+	exit('class '.$className.' not found');
+	
+}
+
 /*
  * des:mvc路由转发
  */
@@ -25,7 +56,7 @@ class Route{
 				echo "this class not exists";
 			}
 		}else{
-			echo "Controller file not exists";
+			echo "$controller Controller file not exists";
 		}
 	}
 }
