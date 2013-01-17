@@ -1,29 +1,41 @@
 <?php
 function __autoload($className){
 	$frameworkFileName = FRAMEWORK_PATH.$className.'.php';
-	if(is_file($frameworkFileName))
-		include_once $frameworkFileName && exit();
-
+	if(is_file($frameworkFileName)){
+		include_once $frameworkFileName;
+		RETURN;
+	}
 	
 	$configFileName = USERAPP_PATH.'Configs/'.$className.'.php';
-	if(is_file($configFileName))
-		include_once $configFileName && exit();
+	if(is_file($configFileName)){
+		include_once $configFileName;
+		return;
+	}
+		
 	
 	$ControllersFileName = USERAPP_PATH.'Modules/Controllers/'.$className.'.php';
-	if(is_file($ControllersFileName))
-		include_once $ControllersFileName && exit();
-
+	if(is_file($ControllersFileName)){
+		include_once $ControllersFileName;
+		return;
+	}
 	
 	$ModelsFileName = USERAPP_PATH.'Modules/Models/'.$className.'.php';
-	if(is_file($ModelsFileName))
-		include_once $ModelsFileName && exit();
-		
+	if(is_file($ModelsFileName)){
+		include_once $ModelsFileName;
+		return;	
+	}
 	$ViewsFileName = USERAPP_PATH.'Modules/Views/'.$className.'.php';
-	if(is_file($ViewFileNames))
-		include_once $ViewFileNames && exit();
+	if(is_file($ViewsFileName)){
+		include_once $ViewsFileName;
+		return;
+	}
+	
 	
 	$PluginsFileName = USERAPP_PATH.'Plugins/'.$className.'.php';
-		include_once $PluginsFilename && exit();
+	if(is_file($PluginsFileName)){
+		include_once $PluginsFileName;
+		return;
+	}
 	
 	exit('class '.$className.' not found');
 	

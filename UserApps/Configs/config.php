@@ -2,5 +2,9 @@
 
 return array(
 	'defaultController'	=>	'Index',
-	'defaultAction'		=>	'index'
+	'defaultAction'		=>	'index',
+	'timeZone'			=>	'PRC',
+	'debug'				=>	'true',
+	'errorReporting'	=>	-1
+
 );

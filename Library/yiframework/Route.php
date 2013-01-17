@@ -3,7 +3,7 @@
 /*
  * des:mvc路由转发
  */
-class Route{
+class Route extends Base{
 	
 	//静态方法
 	public static function run(){ 
