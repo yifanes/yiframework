@@ -11,8 +11,7 @@ function __autoload($className){
 		include_once $configFileName;
 		return;
 	}
-		
-	
+
 	$ControllersFileName = USERAPP_PATH.'Modules/Controllers/'.$className.'.php';
 	if(is_file($ControllersFileName)){
 		include_once $ControllersFileName;

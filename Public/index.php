@@ -1,4 +1,5 @@
 <?php
+
 //定义项目根目录
 defined("APP_PATH") || define('APP_PATH',dirname(__FILE__).'/../');
 //定义框架所在目录
