@@ -2,7 +2,7 @@
 
 //前端总控制器中检测是否非法入口
 defined('APP_PATH') || exit('Access Denied');
-//定义用户modules路径
+//定义用户app路径
 defined('USERAPP_PATH') || define('USERAPP_PATH', APP_PATH.'UserApps/');
 //定义配置文件
 defined('CONFIG_PATH') || define('CONFIG_PATH', USERAPP_PATH.'/Configs/');

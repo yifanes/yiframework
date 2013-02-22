@@ -11,9 +11,15 @@ class Route extends Base{
 		$controller = empty($_GET['c']) ? C('defaultController') : trim($_GET['c']);
 		//定义默认方法
 		$action = empty($_GET['a']) ? C('defaultAction') : trim($_GET['a']);
+
+        Path::setBasePath($_SERVER['HTTP_HOST'].substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], '/')));
+        Path::setController($controller);
+        Path::setAction($action);
+
 		$controllerBasePath = APP_PATH.'UserApps/Modules/Controllers/';
 		$controllerFilePath = $controllerBasePath .$controller ."Controller.php";
-		if(is_file($controllerFilePath)){
+
+        if(is_file($controllerFilePath)){
 			include_once $controllerFilePath;
 			$controllerName = $controller . 'Controller';
 			if(class_exists($controllerName)){

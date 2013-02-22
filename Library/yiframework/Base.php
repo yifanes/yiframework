@@ -4,6 +4,7 @@
  */
 
 class Base{
+    //方法不存在调用的魔术方法
 	public function __call($name, $arguments){
 		if(true === C('Debug')){
 			echo "not exists method :";

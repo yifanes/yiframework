@@ -4,7 +4,7 @@
  * 简单模板引擎常用的2个方法
  */
 class View extends Base{
-	const VIEW_BASE_PATH = '/Views/';
+	const VIEW_BASE_PATH = 'Views/';
 	
 	private static $_data = array();
 	
@@ -21,7 +21,7 @@ class View extends Base{
 			extract(self::$_data);
 			include $file;
 		}else{
-			throw new Exception('');
+			throw new Exception(ViewException::NOT_EXISTS_TEMPLATE);
 		}
 	}
 }
