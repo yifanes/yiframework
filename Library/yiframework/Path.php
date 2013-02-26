@@ -22,12 +22,12 @@ class Path extends Base{
 
     public static function setBasePath($base)
     {
-        self::$_base = $base;
+        self::$_basePath = $base;
     }
 
     public static function getBasePath()
     {
-        return self::$_base;
+        return self::$_basePath;
     }
 
     public static function setController($controller)

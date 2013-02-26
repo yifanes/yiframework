@@ -3,6 +3,7 @@
 /*
  * des:mvc路由转发
  */
+
 class Route extends Base{
 	
 	//静态方法
