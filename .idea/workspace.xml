@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2124e1ae-36ca-478d-a412-6555934ebac0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/yiframework/Controller.php" afterPath="$PROJECT_DIR$/Library/yiframework/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/yiframework/Function.php" afterPath="$PROJECT_DIR$/Library/yiframework/Function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/yiframework/Path.php" afterPath="$PROJECT_DIR$/Library/yiframework/Path.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/yiframework/Route.php" afterPath="$PROJECT_DIR$/Library/yiframework/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/index.php" afterPath="$PROJECT_DIR$/Public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserApps/Configs/config.php" afterPath="$PROJECT_DIR$/UserApps/Configs/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MOVED" beforePath="E:\wamp\www\yiframework\Library\ModelBase.php" afterPath="$PROJECT_DIR$/Library/yiframework/ModelBase.php" />
     </list>
     <ignored path="yiframework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,9 +93,9 @@
         </entry>
       </file>
       <file leaf-file-name="ModelBase.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Library/ModelBase.php">
+        <entry file="file://$PROJECT_DIR$/Library/yiframework/ModelBase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="0.43326885">
+            <state line="12" column="5" selection-start="246" selection-end="246" vertical-scroll-proportion="0.3713733">
               <folding />
             </state>
           </provider>
@@ -320,20 +313,6 @@
               <option name="myItemId" value="Library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yiframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yiframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="yiframework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -365,6 +344,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\wamp\www" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\wamp\www\yiframework\Library\yiframework" />
     </key>
   </component>
   <component name="RunManager">
@@ -614,9 +596,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Library/ModelBase.php">
+    <entry file="file://$PROJECT_DIR$/Library/yiframework/ModelBase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="0.43326885">
+        <state line="12" column="5" selection-start="246" selection-end="246" vertical-scroll-proportion="0.3713733">
           <folding />
         </state>
       </provider>
