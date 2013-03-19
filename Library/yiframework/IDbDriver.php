@@ -8,7 +8,7 @@
 
 interface IDbDriver{
     function prepare($sql);
-    function execute(Array $arr);
+    function execute($sql, Array $arr);
     function connect();
     function close();
     function getAllByAssocArray();

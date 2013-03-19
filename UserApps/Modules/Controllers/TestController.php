@@ -7,6 +7,6 @@
  */
 class TestController extends Controller{
     public function test(){
-        $this->distinct()->where()->field()->table()->group()->order()->select();
+
     }
 }

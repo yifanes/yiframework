@@ -8,6 +8,11 @@
 
 class PdoDriver extends Base implements IDbDriver{
     private $_db = null;
+
+    public function getDb()
+    {
+        return $this->_db;
+    }
     private $_pstmt = null;
     public function __construct(){
         $this->connect();
@@ -21,7 +26,7 @@ class PdoDriver extends Base implements IDbDriver{
         $this->_pstmt = $this->_db->prepare($sql);
     }
 
-    function execute(Array $arr)
+    function execute($sql, Array $arr)
     {
         if(null === $this->_pstmt){
             Logger::log('[Error]:not prepared statement');
