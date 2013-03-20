@@ -1,19 +1,14 @@
 <?php
 /**
- * Created by JetBrains PhpStorm.
  * User: zhangxy
  * Date: 13-2-26
  * Time: 上午10:22
  */
 
 class PdoDriver extends Base implements IDbDriver{
-    private $_db = null;
 
-    public function getDb()
-    {
-        return $this->_db;
-    }
     private $_pstmt = null;
+    private $_db = null;
     public function __construct(){
         $this->connect();
     }
@@ -26,12 +21,12 @@ class PdoDriver extends Base implements IDbDriver{
         $this->_pstmt = $this->_db->prepare($sql);
     }
 
-    function execute($sql, Array $arr)
+    function execute($sql)
     {
         if(null === $this->_pstmt){
             Logger::log('[Error]:not prepared statement');
         }else{
-            if(false === $this->_pstmt->execute($arr)){
+            if(false === $this->_pstmt->execute($sql)){
                 Logger::log('[Error]:sql error,error info is :' .var_dump($this->_pstmt->errorInfo()));
             }else{
                 Logger::log('[Notice]:execute sql is succeed');
