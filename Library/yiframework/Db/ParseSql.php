@@ -9,7 +9,7 @@ class ParseSql extends Base{
     private $_sql = '';
     private $_params = array();
 
-    public function execute(Array $options){
+    public function select(Array $options){
         $this->_sql = str_replace(array(
                 ':distinct', ':field', ':table', ':where', ':group', ':order'
             ),

@@ -6,18 +6,32 @@
  */
 class ModelBase extends Base{
     protected $_db = null;
-    protected $_table = null;
     private $_sqlParser = null;
+    private $_options = array(
+        'where' =>'',
+        'field' =>'',
+        'distinct'=>'',
+        'table'=>'',
+        'order'=>'',
+        'group'=>''
+    );
 
 
     public function __construct(){
         $this->_db = ConnectManage::getConnect();
-        $this->_sqlParser = new Parser();
+        $this->_sqlParser = new ParseSql();
     }
 
     public function __call($name, $arguments)
     {
-
+        if(in_array($name, array(
+            'where','field','distinct','table','order','group'
+        ))){
+            $this->_options[$name] = isset($arguments[0]) ? $arguments[0] : null;
+            return $this;
+        }else{
+            parent::__call($name, $arguments);
+        }
     }
 
     public function execute($sql, Array $arr){
@@ -32,17 +46,11 @@ class ModelBase extends Base{
 
     }
 
-    public function getTable(){
-        return $this->_table;
-
-    }
     public function setTable($tableName){
         $this->_table = $tableName;
         return true;
     }
-    public function count(){
 
-    }
     public function update(){
 
     }
@@ -52,14 +60,6 @@ class ModelBase extends Base{
     public function insert(){
 
     }
-    public function fetchOneList(){
 
-    }
-    public function fetchAll(){
-
-    }
-    public function fetchAllField(){
-
-    }
 
 }
