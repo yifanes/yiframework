@@ -43,15 +43,14 @@ class ModelBase extends Base{
     }
 
     public function select(){
+        $this->_sqlParser->select($this->_options);
+        $this->_db->prepare($this->_sqlParser->getSql());
+        $this->_db->execute($this->_sqlParser->getParams());
 
-    }
-
-    public function setTable($tableName){
-        $this->_table = $tableName;
-        return true;
     }
 
     public function update(){
+        $this->_sqlParser->update($this->_options);
 
     }
     public function delete(){

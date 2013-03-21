@@ -1,8 +1,10 @@
 <?php
 function __autoload($className){
 	$frameworkFileName = FRAMEWORK_PATH.$className.'.php';
+    $frameworkDbFileName = FRAMEWORK_PATH . 'DB/' . $className.'.php';
 	if(is_file($frameworkFileName)){
 		include_once $frameworkFileName;
+        include_once $frameworkDbFileName;
 		RETURN;
 	}
 	

@@ -9,6 +9,3 @@ include_once FRAMEWORK_PATH.'FrontController.php';
 
 $frontController = FrontController::getInstance();
 $frontController->run();
-
-var_dump(null == 0);
-exit;
