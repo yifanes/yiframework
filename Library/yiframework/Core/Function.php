@@ -96,3 +96,16 @@ function stripcslashes_deep($value){
     $value = is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
     return $value;
 }
+
+function ajax_echo( $info )
+{
+    if( !headers_sent() )
+    {
+        header("Content-Type:text/html;charset=utf-8");
+        header("Expires: Thu, 01 Jan 1970 00:00:01 GMT");
+        header("Cache-control: no-cache, must-revaliable");
+        header("Parama: no-cache");
+
+    }
+    echo $info;
+}

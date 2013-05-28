@@ -82,3 +82,47 @@ yiframework在mvc上没有出彩的地方，一切都和你使用别的框架一
 
 ###some functions
 
+C($name = null, $val = null) //设置和读取配置文件中的配置项
+stripcslashes_deep($value)   //递归转义
+ajax_echo( $info )           //输出一个永不过期头的信息
+doSlashes()                  //递归转义gpc
+Logger::log($param)          //日志记录到文件
+Response:: redirect($url)    //跳转
+assign($name, $value = '')   //模版赋值
+display($tpl)                //模版调用
+
+   etc.
+
+###template
+
+模版展示尽量采用简洁和php段标签的优势
+
+下面写一个display的伪代码：
+
+    function display($data, $layout)
+    {
+       @extra($data);
+       require($layout.".tpl");
+    }
+
+这里将一个数组传入进来，然后extra化后，原本$data['title']就可以在模版中用$title的方式展现了,而调用模版也没更简单了，直接require
+
+同时yiframework推崇php的模版标签，如下：
+
+1.分支判断
+
+    <?php if($lavel >= 9): ?>
+    你没有权限进入该系统
+    <?php else: ?>
+    欢迎访问yiframework框架页面
+    <?php endif; ?>
+
+2.foreach循环
+
+    <?php foreach ($variable as $key => $value): ?>
+    <li><?=$value?></li>
+    <?php endforeach; ?>
+
+3.普通变量的输出:
+
+ <?=$variable?>
