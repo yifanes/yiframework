@@ -24,17 +24,22 @@ yiframework遵循[MIT](http://ocw.mit.edu/index.htm)协议
 
 yiframework简短教程
 ===========
+###web root
 
-1.框架已经定义了一个Public目录，在线上的产品希望将此目录设置为web root，但是就像简介说的不拘泥于此，完全可以把框架包含在里面，因为在前端
+框架已经定义了一个Public目录，在线上的产品希望将此目录设置为web root，但是就像简介说的不拘泥于此，完全可以把框架包含在里面，因为在前端
 控制器中定义了:
 
     //前端总控制器中检测是否非法入口
     defined('APP_PATH') || exit('Access Denied');
 
-2.yiframework只是一个注重结构的框架，所以教程也就不是一个全的lib库，不是zf，没有类结构文档，也不是你读文档而不读框代码，所以设计之初，都是希望在
+###not a lib manual
+
+yiframework只是一个注重结构的框架，所以教程也就不是一个全的lib库，不是zf，没有类结构文档，也不是你读文档而不读框代码，所以设计之初，都是希望在
 自己的开发环境中能够适应阅读源码去写代码的原则，相信一个试图达到合格的phper也在这样努力o(∩_∩)o
 
-3.yiframework遵循mvc，所以但入口首当其说，在这个框架中已经定义了这样一个入口文件
+###mvc anterance
+
+yiframework遵循mvc，所以但入口首当其说，在这个框架中已经定义了这样一个入口文件
 
     <?php
 
@@ -48,11 +53,15 @@ yiframework简短教程
     $frontController = FrontController::getInstance();
     $frontController->run();
 
-4.yiframework在mvc上没有出彩的地方，一切都和你使用别的框架一样，由controller和action还有其他的参数来请求资源，例如下面的例子：
+###url pattern
+
+yiframework在mvc上没有出彩的地方，一切都和你使用别的框架一样，由controller和action还有其他的参数来请求资源，例如下面的例子：
 
     ~/webroot/index.php?a=index&c=read&page=12
 
-5.数据库操作
+###DB handler
+
+数据库操作
 
     interface IDbDriver{
              function prepare($sql);
@@ -70,4 +79,6 @@ yiframework简短教程
 ![db uml](/assets/db_uml.png)
 
 定义接口的目的在于我们在实现接口的时候可以使用mysqli和pdo两种方式中的任意一种去实现这个接口，而不需要下层去处理不同php扩展而造成的分支处理
+
+###some functions
 
