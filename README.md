@@ -83,15 +83,22 @@ yiframework在mvc上没有出彩的地方，一切都和你使用别的框架一
 ###some functions
 
 C($name = null, $val = null) //设置和读取配置文件中的配置项
+
 stripcslashes_deep($value)   //递归转义
+
 ajax_echo( $info )           //输出一个永不过期头的信息
+
 doSlashes()                  //递归转义gpc
+
 Logger::log($param)          //日志记录到文件
+
 Response:: redirect($url)    //跳转
+
 assign($name, $value = '')   //模版赋值
+
 display($tpl)                //模版调用
 
-   etc.
+etc.
 
 ###template
 
