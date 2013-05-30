@@ -1,4 +1,6 @@
+<pre>
 yiframework
+</pre>
 ===========
 
 yet another php framework.
