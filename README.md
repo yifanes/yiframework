@@ -32,6 +32,13 @@ yiframework不附带工具函数和类，一切都需要在项目中针对不同
 
 yiframework遵循[MIT](http://ocw.mit.edu/index.htm)协议
 
+
+yiframework时隔一年，是去年将要北上的时候准备的代码，今年这个时候打算好好规划下这个框架，留作以后使用
+===========
+###结构优化
+
+
+
 yiframework简短教程
 ===========
 ###web root

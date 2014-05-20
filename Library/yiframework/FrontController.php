@@ -8,7 +8,7 @@ defined('USERAPP_PATH') || define('USERAPP_PATH', APP_PATH.'UserApps/');
 defined('CONFIG_PATH') || define('CONFIG_PATH', USERAPP_PATH.'/Configs/');
 
 //调用入口处理文件
-include_once FRAMEWORK_PATH . 'Function.php';
+include_once FRAMEWORK_PATH . 'Core/Function.php';
 
 
 class FrontController extends Base{

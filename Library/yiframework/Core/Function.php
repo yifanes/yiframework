@@ -2,11 +2,20 @@
 function __autoload($className){
 	$frameworkFileName = FRAMEWORK_PATH.$className.'.php';
     $frameworkDbFileName = FRAMEWORK_PATH . 'DB/' . $className.'.php';
-	if(is_file($frameworkFileName)){
+    $frameworkCoreFileName = FRAMEWORK_PATH . 'Core/' . $className . '.php';
+
+    if(is_file($frameworkFileName)){
 		include_once $frameworkFileName;
-        include_once $frameworkDbFileName;
 		RETURN;
 	}
+    if(is_file($frameworkDbFileName)){
+        include_once $frameworkDbFileName;
+        RETURN;
+    }
+    if(is_file($frameworkCoreFileName)){
+        include_once $frameworkCoreFileName;
+        RETURN;
+    }
 	
 	$configFileName = USERAPP_PATH.'Configs/'.$className.'.php';
 	if(is_file($configFileName)){
